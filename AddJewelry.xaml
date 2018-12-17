@@ -29,17 +29,19 @@
                HorizontalAlignment="Left" 
                Margin="28,102,0,0"
                VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" 
+        <TextBox Name="tbxQuantity"
+                 HorizontalAlignment="Left" 
                  Height="23" 
                  Margin="112,105,0,0" 
                  TextWrapping="Wrap"
                  Text="" 
                  VerticalAlignment="Top"
                  Width="120"/>
-        <Button Content="Add"
+        <Button Name="btnAdd"
+                Content="Add"
                 HorizontalAlignment="Left" 
-                Margin="134,229,0,0" 
+                Margin="130,215,0,0" 
                 VerticalAlignment="Top" 
-                Width="75"/>
+                Width="98" Height="37" Click="Button_Click"/>
     </Grid>
 </Window>

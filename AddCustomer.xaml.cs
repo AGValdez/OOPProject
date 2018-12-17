@@ -28,7 +28,9 @@ namespace OOP_Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            TransactionWindow newTransaction = new TransactionWindow();
+            newTransaction.Show();
+            this.Close();
         }
     }
 }

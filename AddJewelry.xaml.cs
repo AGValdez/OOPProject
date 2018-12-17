@@ -28,5 +28,12 @@ namespace OOP_Project
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow newMainWindow = new MainWindow();
+            newMainWindow.Show();
+            this.Close();
+        }
     }
 }

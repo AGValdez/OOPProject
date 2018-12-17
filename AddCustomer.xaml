@@ -61,7 +61,8 @@
                  Grid.Column="1"
                  Grid.Row="4"
                  VerticalContentAlignment="Center"/>
-        <Button Content="Save"
+        <Button Name="btnSave"
+                Content="Save"
                 Grid.Column="1"
                 Grid.Row="5"
                 VerticalContentAlignment="Center" Margin="10,41,188,-31" Click="Button_Click"/>

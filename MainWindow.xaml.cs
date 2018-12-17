@@ -27,7 +27,9 @@ namespace OOP_Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            AddJewelry newAddJewelry = new AddJewelry();
+            newAddJewelry.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

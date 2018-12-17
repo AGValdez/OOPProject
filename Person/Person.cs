@@ -9,29 +9,34 @@ namespace OOP_project
     class Person
     {
         public string FirstName;
-        public string MiddleInitial;
+        public string MiddleName;
         public string LastName;
         public string BirthDate;
         public string Address;
 
         public Person(string firstName, string lastName, string middleName = "")
         {
-            FirstName = firstName;
-            MiddleInitial = middleName;
-            LastName = lastName;
+            FirstName = FormatName(firstName);
+            MiddleName = FormatName(middleName);
+            LastName = FormatName(lastName);
         }
 
         public string GetFullName()
         {
-            FirstName = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(FirstName.ToLower());
-            MiddleInitial = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(MiddleInitial.ToLower());
-            LastName = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(LastName.ToLower());
-
-            return FirstName + " " + MiddleInitial + ". " + LastName;
+            return String.Format("{0} {1}. {2}", FirstName, MiddleName, LastName);
         }
         public int GetAge()
         {
-            return Calculations.CalculateAge(BirthDate, true);
+            return Calculations.CalculateAge(BirthDate);
+        }
+        private string FormatName(string name)
+        {
+            name = name.ToLower();
+            string[] names = name.Split(' ');
+            string formattedName = "";
+            for (int counter = 0; counter < names.Length; counter++)
+            formattedName = formattedName + char.ToUpper(names[counter][0]) + names[counter].Substring(1) + " ";
+            return formattedName.Remove(formattedName.Length - 1);
         }
     }
 }
