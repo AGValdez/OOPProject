@@ -8,19 +8,29 @@ namespace OOP_project
 {
     class Calculations
     {
-        static int CalculateAge(string birthDate)
+        public static int CalculateAge(string birthDate, bool returnInMonths = false )
         {
-            return 0;
+            int age;
+
+            DateTime now = DateTime.UtcNow;
+            DateTime past = Convert.ToDateTime(birthDate);
+
+            age = 12* (now.Year - past.Year) + (now.Month - past.Month);
+            if (age < 0)
+                age *= -1;
+            if (!returnInMonths)
+                age = age / 12;
+            return age;
         }
 
-        static decimal CalculateInterest(decimal principalAmount, decimal monthlyRate)
+        public static decimal CalculateInterest(decimal principalAmount, decimal monthlyRate)
         {
-            return 0;
+            return principalAmount * (monthlyRate / 100);
         }
 
-        static decimal CalculateAccruedAmount(decimal principalAmount, decimal monthlyRate, string date)
+        public static decimal CalculateAccruedAmount(decimal principalAmount, decimal monthlyRate, string date)
         {
-            return 0;
+            return principalAmount + CalculateInterest(principalAmount, monthlyRate) * CalculateAge(date, true); 
         }
     }
 }
