@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_Project"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="AddCustomer" Height="387" Width="453">
     <Grid Margin="0,0,19,23">
         <Grid.RowDefinitions>

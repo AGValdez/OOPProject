@@ -5,17 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_Project"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="AddJewelry" Height="382.816" Width="355.071">
     <Grid Margin="0,0,2,-21">
-        <Label Content="Select Items:&#xD;&#xA;" HorizontalAlignment="Left" Margin="28,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.643,-0.344"/>
-        <ComboBox Name="CmbItems" HorizontalAlignment="Left" Margin="112,62,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CmbItems_SelectionChanged">
-            <ComboBoxItem Content="Necklace"/>
+        <Label Content="Select Items:&#xD;&#xA;" 
+               HorizontalAlignment="Left" 
+               Margin="28,58,0,0" 
+               VerticalAlignment="Top" 
+               RenderTransformOrigin="0.643,-0.344"/>
+        <ComboBox Name="CmbItems"
+                  HorizontalAlignment="Left"
+                  Margin="112,62,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="120" 
+                  SelectionChanged="CmbItems_SelectionChanged">
+            <ComboBoxItem Name="cmbNecklace" 
+                          Content="Necklace"/>
             <ComboBoxItem Content="Bracelet"/>
             <ComboBoxItem Content="Ring"/>
             <ComboBoxItem Content="Earrings"/>
         </ComboBox>
-        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="28,102,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="112,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="134,229,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Quantity:" 
+               HorizontalAlignment="Left" 
+               Margin="28,102,0,0"
+               VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23" 
+                 Margin="112,105,0,0" 
+                 TextWrapping="Wrap"
+                 Text="" 
+                 VerticalAlignment="Top"
+                 Width="120"/>
+        <Button Content="Add"
+                HorizontalAlignment="Left" 
+                Margin="134,229,0,0" 
+                VerticalAlignment="Top" 
+                Width="75"/>
     </Grid>
 </Window>

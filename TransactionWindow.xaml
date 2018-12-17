@@ -5,18 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_Project"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="TransactionWindow" Height="448" Width="382">
     <Grid Margin="0,0,14,7">
-        <Label Content="Customer:" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top"/>
-        <Label Content="Product:" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.481,0.577"/>
-        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
-        <Label Content="Price:" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top"/>
-        <Label Content="Promised Date:" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="105,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="105,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="105,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="105,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <DatePicker Name="dpkPromisedDate" VerticalContentAlignment="Center" Margin="105,174,114,198"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="132,292,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Customer:"
+               HorizontalAlignment="Left"
+               Margin="10,42,0,0"
+               VerticalAlignment="Top"/>
+        <Label Content="Product:" 
+               HorizontalAlignment="Left" 
+               Margin="10,73,0,0" 
+               VerticalAlignment="Top" 
+               RenderTransformOrigin="0.481,0.577"/>
+        <Label Content="Quantity:" 
+               HorizontalAlignment="Left" 
+               Margin="10,107,0,0" 
+               VerticalAlignment="Top"/>
+        <Label Content="Price:"
+               HorizontalAlignment="Left" 
+               Margin="10,135,0,0" 
+               VerticalAlignment="Top"/>
+        <Label Content="Promised Date:" 
+               HorizontalAlignment="Left" 
+               Margin="10,174,0,0" 
+               VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23"
+                 Margin="105,42,0,0" 
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23"
+                 Margin="105,73,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23" 
+                 Margin="105,107,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23"
+                 Margin="105,138,0,0"
+                 TextWrapping="Wrap" 
+                 Text="" 
+                 VerticalAlignment="Top"
+                 Width="120"
+                 TextChanged="TextBox_TextChanged"/>
+        <DatePicker Name="dpkPromisedDate"
+                    VerticalContentAlignment="Center"
+                    Margin="105,174,114,198"/>
+        <Button Content="Add"
+                HorizontalAlignment="Left" 
+                Margin="132,292,0,0" 
+                VerticalAlignment="Top"
+                Width="75"/>
+        <Button Name="btnaddName" 
+                Content="Add Customer" 
+                HorizontalAlignment="Left" 
+                Margin="230,45,0,0" 
+                VerticalAlignment="Top" 
+                Width="84"/>
     </Grid>
 </Window>
