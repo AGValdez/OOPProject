@@ -5,29 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="380" Width="365"
+        Title="MainWindow" Height="550" Width="400"
         WindowStartupLocation="CenterScreen"
-        Background="LightGray">
-    <Grid Margin="0,0,2,3">
+        Background="White" ResizeMode="NoResize">
+    <Grid>
+        <Rectangle Height="280" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF34268A" 
+                                  Offset="1"/>
+                    <GradientStop Color="#FF33288B" 
+                                  Offset="0.5"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="Images/homeWht.png" 
+               Width="100" 
+               Height="100" 
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top" 
+               Margin="5"/>
+        <Rectangle Width="280" 
+                   Height="240" 
+                   Fill="White"
+                   VerticalAlignment="Bottom"
+                   Margin="0, 100">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FFBBBBBB" 
+                                  Direction="0" 
+                                  BlurRadius="15" 
+                                  RenderingBias="Quality"
+                                  ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
         <Button Name="btnInventory"
                 Content="Inventory" 
-                HorizontalAlignment="Left" 
-                Margin="125,220,0,0" 
-                VerticalAlignment="Top" 
-                Width="97" 
-                Height="33" 
-                Click="Button_Click"/>
-        <Button Name="btnAddTransaction" Content="Add Transaction"
-                HorizontalAlignment="Left"
-                Margin="115,268,0,19" 
-                VerticalAlignment="Center" 
-                Width="117" 
-                Height="42" Click="Button_Click_1"/>
-        <ListBox Name="lbBox" 
-                 HorizontalAlignment="Left" 
-                 Height="162" 
-                 Margin="80,40,0,0" 
-                 VerticalAlignment="Top"
-                 Width="193"/>
+                HorizontalAlignment="Center"  
+                VerticalAlignment="Bottom"  
+                Width="95" 
+                Height="35" 
+                Click="Button_Click" 
+                Margin="124,0,124,120"/>
+        <Button Name="btnAddTransaction" 
+                Content="Add Transaction"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"  
+                Width="115" 
+                Height="40" 
+                Click="Button_Click_1" Margin="114,0,114,30"/>
+        <ListBox Name="lbBox"  
+                 Width="170"
+                 Height="140"
+                 HorizontalAlignment="Center" Margin="107,205,107,177"/>
     </Grid>
 </Window>
