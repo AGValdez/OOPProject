@@ -16,8 +16,8 @@
                     <GradientStop Color="#FF2281D1"/>
                     <GradientStop Color="#FF34268A" 
                                   Offset="1"/>
-                    <GradientStop Color="#FF33288B" 
-                                  Offset="0.5"/>
+                    <GradientStop Color="#FF3328" 
+                                  Offset="0"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
@@ -38,7 +38,7 @@
                                   BlurRadius="15" 
                                   RenderingBias="Quality"
                                   ShadowDepth="1"/>
-            </Rectangle.Effect>
+            </Rectangle.Effect> 
         </Rectangle>
         <Button Name="btnInventory"
                 Content="Inventory" 
