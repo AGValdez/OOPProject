@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_project
+namespace OOP_Project
 {
-    class Calculations
+    public class Calculations
     {
         public static int CalculateAge(string birthDate, bool returnInMonths = false )
         {

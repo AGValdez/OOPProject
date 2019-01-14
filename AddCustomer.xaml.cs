@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using OOP_Project;
 
 namespace OOP_Project
 {
@@ -20,16 +21,30 @@ namespace OOP_Project
     
     public partial class AddCustomer : Window
     {
-        
+        public DataStorage data;
+        //public MainWindow main;
+
         public AddCustomer()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            TransactionWindow newTransaction = new TransactionWindow();
-            newTransaction.Show();
+        {           
+            Person customer = new Person(tbxFirstName.Text, tbxLastName.Text, tbxMiddleName.Text);
+            bool exist = false;
+            foreach (Person cust in data.customers)
+            {
+                if (customer.GetFullName() == cust.GetFullName())
+                {
+                    exist = true;
+                    break;
+                }
+            }
+            if (!exist)
+                data.customers.Add(customer);
+            else
+                MessageBox.Show("The name you have ebtered already exist in the system");
             this.Close();
         }
     }

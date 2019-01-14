@@ -19,6 +19,8 @@ namespace OOP_Project
     /// </summary>
     public partial class TransactionWindow : Window
     {
+        public MainWindow main;
+        public DataStorage data;
         public TransactionWindow()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace OOP_Project
 
         }
 
-        private void btnaddName_Click(object sender, RoutedEventArgs e)
+        private void btnAddName_Click(object sender, RoutedEventArgs e)
         {
             AddCustomer newAddCustomer = new AddCustomer();
             newAddCustomer.Show();
@@ -41,6 +43,17 @@ namespace OOP_Project
             MainWindow newMainWindow = new MainWindow();
             newMainWindow.Show();
             this.Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            foreach (Person customer in data.customers)
+                cmbCustomer.Items.Add(customer.GetFullName());
         }
     }
 }

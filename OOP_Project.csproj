@@ -91,7 +91,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Person\Person.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -119,10 +119,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AV_Logo.png" />
+    <Resource Include="Images\AV_Logo.png" />
+    <Resource Include="Images\Gaming-Rook-icon.png" />
+    <Resource Include="Images\homeBlk.png" />
+    <Resource Include="Images\homeWht.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Gaming-Rook-icon.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

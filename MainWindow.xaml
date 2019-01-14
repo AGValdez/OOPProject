@@ -5,29 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="380" Width="365"
+        Title="MainWindow" Height="550" Width="400"
         WindowStartupLocation="CenterScreen"
-        Background="LightGray">
-    <Grid Margin="0,0,2,3">
+        Background="White" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Height="280" 
+                   VerticalAlignment="Top"
+                   Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF34268A" 
+                                  Offset="1"/>
+                    <GradientStop Color="#FF3328" 
+                                  Offset="0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="Images/homeWht.png" 
+               Width="90" 
+               Height="90" 
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top" 
+               Margin="153,10,151,0"
+               Grid.ColumnSpan="2"/>
+        <Rectangle Width="280" 
+                   Fill="White"
+                   Margin="0,181,57,0" 
+                   HorizontalAlignment="Right" 
+                   Grid.ColumnSpan="2" 
+                   Height="240" 
+                   VerticalAlignment="Top">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FFBBBBBB" 
+                                  Direction="0" 
+                                  BlurRadius="15" 
+                                  RenderingBias="Quality"
+                                  ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
         <Button Name="btnInventory"
-                Content="Inventory" 
-                HorizontalAlignment="Left" 
-                Margin="125,220,0,0" 
+                Content="Inventory"  
                 VerticalAlignment="Top" 
-                Width="97" 
-                Height="33" 
-                Click="Button_Click"/>
-        <Button Name="btnAddTransaction" Content="Add Transaction"
-                HorizontalAlignment="Left"
-                Margin="115,268,0,19" 
-                VerticalAlignment="Center" 
-                Width="117" 
-                Height="42" Click="Button_Click_1"/>
+                Height="40" 
+                Click="Button_Click" 
+                Margin="73,342,10,0"/>
+        <Button Name="btnAddTransaction" 
+                Content="Add Transaction"
+                HorizontalAlignment="Right"  
+                Width="114" 
+                Click="Button_Click_1" 
+                Margin="0,342,73,0" 
+                Grid.Column="1" 
+                Height="40" 
+                VerticalAlignment="Top"/>
         <ListBox Name="lbBox" 
-                 HorizontalAlignment="Left" 
-                 Height="162" 
-                 Margin="80,40,0,0" 
-                 VerticalAlignment="Top"
-                 Width="193"/>
+                 Margin="0,198,79,0" 
+                 Grid.ColumnSpan="2" 
+                 Height="126" 
+                 VerticalAlignment="Top" 
+                 HorizontalAlignment="Right" 
+                 Width="236"/>
     </Grid>
 </Window>

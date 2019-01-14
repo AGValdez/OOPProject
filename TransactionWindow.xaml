@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:OOP_Project"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="TransactionWindow" Height="448" Width="382">
+        Title="TransactionWindow" 
+        Height="550" 
+        Width="400"
+        Activated="Window_Activated">
     <Grid Margin="0,0,2,1">
         <Label Content="Customer:"
                HorizontalAlignment="Left"
@@ -23,7 +26,7 @@
                VerticalAlignment="Top"/>
         <Label Content="Price:"
                HorizontalAlignment="Left" 
-               Margin="10,135,0,0" 
+               Margin="10,141,0,0" 
                VerticalAlignment="Top"/>
         <Label Content="Promised Date:" 
                HorizontalAlignment="Left" 
@@ -35,10 +38,16 @@
                   VerticalAlignment="Top" 
                   Width="120"/>
         <ComboBox Name="cmbProduct"
-                  HorizontalAlignment="Left" 
+                  HorizontalAlignment="Left"
                   Margin="105,73,0,0" 
-                  VerticalAlignment="Top"
-                  Width="120"/>
+                  VerticalAlignment="Top" 
+                  Width="120">
+            <ComboBoxItem Name="cmbNecklace" 
+                          Content="Necklace"/>
+            <ComboBoxItem Content="Bracelet"/>
+            <ComboBoxItem Content="Ring"/>
+            <ComboBoxItem Content="Earrings"/>
+        </ComboBox>
         <TextBox Name="tbxQuantity"
                  HorizontalAlignment="Left" 
                  Height="23" 
@@ -50,7 +59,7 @@
                  TextChanged="TextBox_TextChanged"/>
         <TextBlock Name="tblPrice"
                    HorizontalAlignment="Left" 
-                   Margin="105,140,0,0" 
+                   Margin="105,144,0,0" 
                    TextWrapping="Wrap" 
                    Text="" 
                    VerticalAlignment="Top" 
@@ -58,18 +67,28 @@
                    Width="120"/>
         <DatePicker Name="dpkPromisedDate"
                     VerticalContentAlignment="Center"
-                    Margin="105,174,114,206"/>
+                    Margin="105,175,165,304"/>
         <Button Name="btnAddButton"
                 Content="Add"
                 HorizontalAlignment="Left" 
-                Margin="140,295,0,0" 
+                Margin="215,347,0,0" 
                 VerticalAlignment="Top"
-                Width="93" Height="36" Click="Button_Click"/>
+                Width="93" Height="36" 
+                Click="Button_Click"/>
+        <Button Name="btnCancel"
+                Content="Cancel"
+                HorizontalAlignment="Left" 
+                Margin="70,347,0,0" 
+                VerticalAlignment="Top"
+                Width="93"
+                Height="36" 
+                Click="btnCancel_Click"/>
         <Button Name="btnAddCustomer" 
                 Content="Add Customer" 
                 HorizontalAlignment="Left" 
                 Margin="230,42,0,0" 
                 VerticalAlignment="Top" 
-                Width="87" Height="23" Click="btnaddName_Click"/>
+                Width="87" Height="23" 
+                Click="btnAddName_Click"/>
     </Grid>
 </Window>

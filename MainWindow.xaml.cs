@@ -20,9 +20,11 @@ namespace OOP_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        public DataStorage data = new DataStorage();
         public MainWindow()
         {
             InitializeComponent();
+            List<string> names = new List<string>();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,8 +37,15 @@ namespace OOP_Project
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             TransactionWindow newTransaction = new TransactionWindow();
+            newTransaction.main = this;
             newTransaction.Show();
+            this.Hide();   
             this.Close();
         }
+    }
+    public class DataStorage
+    {
+        public List<Person> customers = new List<Person>();
+        public List<Product> jewelries = new List<Product>();
     }
 }
