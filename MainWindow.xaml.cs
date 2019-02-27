@@ -37,9 +37,10 @@ namespace OOP_Project
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             TransactionWindow newTransaction = new TransactionWindow();
-            newTransaction.data = data;
+            newTransaction.main = this;
             newTransaction.Show();
             this.Hide();   
+            this.Close();
         }
     }
     public class DataStorage

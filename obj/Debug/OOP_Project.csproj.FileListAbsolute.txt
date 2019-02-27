@@ -61,9 +61,3 @@ D:\OOP_Project\OOP_Project\obj\Debug\OOP_Project.csproj.GenerateResource.cache
 D:\OOP_Project\OOP_Project\obj\Debug\OOP_Project.csproj.CoreCompileInputs.cache
 D:\OOP_Project\OOP_Project\obj\Debug\OOP_Project.exe
 D:\OOP_Project\OOP_Project\obj\Debug\OOP_Project.pdb
-D:\OOP_Project\OOP_Project\bin\Debug\MaterialDesignColors.dll
-D:\OOP_Project\OOP_Project\bin\Debug\MaterialDesignThemes.Wpf.dll
-D:\OOP_Project\OOP_Project\bin\Debug\MaterialDesignThemes.Wpf.pdb
-D:\OOP_Project\OOP_Project\bin\Debug\MaterialDesignThemes.Wpf.xml
-D:\OOP_Project\OOP_Project\obj\Debug\OOP_Project.csproj.CopyComplete
-D:\OOP_Project\OOP_Project\obj\Debug\App.baml

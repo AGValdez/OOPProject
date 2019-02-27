@@ -1,5 +1,4 @@
 ﻿<Window x:Class="OOP_Project.AddCustomer"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +6,7 @@
         xmlns:local="clr-namespace:OOP_Project"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="AddCustomer" Height="387" Width="348.525">
+        Title="AddCustomer" Height="387" Width="453">
     <Grid Margin="0,0,19,23">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -17,41 +16,57 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Label Content="Birthdate"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="First Name:"
+               Grid.Column="0"
+               Grid.Row="0" 
+               VerticalContentAlignment="Center"/>
+        <Label Content="Middle Name:"
+               Grid.Column="0"
+               Grid.Row="1" 
+               VerticalContentAlignment="Center"/>
+        <Label Content="Last Name:"
+               Grid.Column="0"
+               Grid.Row="2" 
+               VerticalContentAlignment="Center"/>
+        <Label Content="Address:"
+               Grid.Column="0"
+               Grid.Row="3" 
+               VerticalContentAlignment="Center"/>
+        <Label Content="Birthdate:"
                Grid.Column="0"
                Grid.Row="4" 
                VerticalContentAlignment="Center"/>
-        <TextBox materialDesign:HintAssist.Hint="First Name"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Name="tbxFirstName"
+        <TextBox Name="tbxFirstName"
                  Grid.Column="1"
                  Grid.Row="0"
                  VerticalContentAlignment="Center"/>
-        <TextBox materialDesign:HintAssist.Hint="Middle Name"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Name="tbxMiddleName"
+        <TextBox Name="tbxMiddleName"
                  Grid.Column="1"
                  Grid.Row="1"
                  VerticalContentAlignment="Center"/>
-        <TextBox materialDesign:HintAssist.Hint="Last Name"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Name="tbxLastName"
+        <TextBox Name="tbxLastName"
                  Grid.Column="1"
                  Grid.Row="2"
                  VerticalContentAlignment="Center"/>
-        <TextBox materialDesign:HintAssist.Hint="Address"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                 Name="tbxAddress"
+        <TextBox Name="tbxAddress"
                  Grid.Column="1"
                  Grid.Row="3"
                  VerticalContentAlignment="Center"/>
         <DatePicker Name="dpkBirthdate"
+                 Grid.Column="1"
                  Grid.Row="4"
-                 VerticalContentAlignment="Center" Margin="67,0,0,0"/>
+                 VerticalContentAlignment="Center"/>
         <Button Name="btnSave"
                 Content="Save"
+                Grid.Column="1"
                 Grid.Row="5"
                 VerticalContentAlignment="Center" 
-                Click="Button_Click" Margin="110,60,110,-51"/>
+                Margin="10,41,188,-31" 
+                Click="Button_Click"/>
     </Grid>
 </Window>
