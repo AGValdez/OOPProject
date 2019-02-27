@@ -17,20 +17,20 @@
                VerticalAlignment="Top"/>
         <Label Content="Product:" 
                HorizontalAlignment="Left" 
-               Margin="10,73,0,0" 
+               Margin="10,97,0,0" 
                VerticalAlignment="Top" 
                RenderTransformOrigin="0.481,0.577"/>
         <Label Content="Quantity:" 
                HorizontalAlignment="Left" 
-               Margin="10,107,0,0" 
+               Margin="10,149,0,0" 
                VerticalAlignment="Top"/>
         <Label Content="Price:"
                HorizontalAlignment="Left" 
-               Margin="10,141,0,0" 
+               Margin="10,200,0,0" 
                VerticalAlignment="Top"/>
         <Label Content="Promised Date:" 
                HorizontalAlignment="Left" 
-               Margin="10,179,0,0" 
+               Margin="10,252,0,0" 
                VerticalAlignment="Top"/>
         <ComboBox Name="cmbCustomer" 
                   HorizontalAlignment="Left" 
@@ -39,9 +39,9 @@
                   Width="120"/>
         <ComboBox Name="cmbProduct"
                   HorizontalAlignment="Left"
-                  Margin="105,73,0,0" 
+                  Margin="105,97,0,0" 
                   VerticalAlignment="Top" 
-                  Width="120">
+                  Width="120" SelectionChanged="cmbProduct_SelectionChanged">
             <ComboBoxItem Name="cmbNecklace" 
                           Content="Necklace"/>
             <ComboBoxItem Content="Bracelet"/>
@@ -51,7 +51,7 @@
         <TextBox Name="tbxQuantity"
                  HorizontalAlignment="Left" 
                  Height="23" 
-                 Margin="105,107,0,0" 
+                 Margin="105,149,0,0" 
                  TextWrapping="Wrap" 
                  Text="" 
                  VerticalAlignment="Top" 
@@ -59,7 +59,7 @@
                  TextChanged="TextBox_TextChanged"/>
         <TextBlock Name="tblPrice"
                    HorizontalAlignment="Left" 
-                   Margin="105,144,0,0" 
+                   Margin="105,203,0,0" 
                    TextWrapping="Wrap" 
                    Text="" 
                    VerticalAlignment="Top" 
@@ -67,18 +67,18 @@
                    Width="120"/>
         <DatePicker Name="dpkPromisedDate"
                     VerticalContentAlignment="Center"
-                    Margin="105,175,165,304"/>
+                    Margin="105,248,165,231"/>
         <Button Name="btnAddButton"
                 Content="Add"
                 HorizontalAlignment="Left" 
-                Margin="215,347,0,0" 
+                Margin="215,383,0,0" 
                 VerticalAlignment="Top"
                 Width="93" Height="36" 
                 Click="Button_Click"/>
         <Button Name="btnCancel"
                 Content="Cancel"
                 HorizontalAlignment="Left" 
-                Margin="70,347,0,0" 
+                Margin="70,383,0,0" 
                 VerticalAlignment="Top"
                 Width="93"
                 Height="36" 
@@ -86,9 +86,9 @@
         <Button Name="btnAddCustomer" 
                 Content="Add Customer" 
                 HorizontalAlignment="Left" 
-                Margin="230,42,0,0" 
+                Margin="251,42,0,0" 
                 VerticalAlignment="Top" 
-                Width="87" Height="23" 
+                Width="129" Height="28" 
                 Click="btnAddName_Click"/>
     </Grid>
 </Window>
