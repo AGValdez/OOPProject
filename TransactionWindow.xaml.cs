@@ -34,8 +34,8 @@ namespace OOP_Project
         private void btnAddName_Click(object sender, RoutedEventArgs e)
         {
             AddCustomer newAddCustomer = new AddCustomer();
+            newAddCustomer.data = data; 
             newAddCustomer.Show();
-            this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -47,6 +47,8 @@ namespace OOP_Project
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow newMainWindow = new MainWindow();
+            newMainWindow.Show();
             this.Close();
         }
 
@@ -54,6 +56,26 @@ namespace OOP_Project
         {
             foreach (Person customer in data.customers)
                 cmbCustomer.Items.Add(customer.GetFullName());
+        }
+
+        private void cmbProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbProduct.Text == "Necklace")
+            {
+                tblPrice.Text = Convert.ToString(5000);
+            }
+            if (cmbProduct.Text == "Earrings")
+            {
+                tblPrice.Text = Convert.ToString(1500);
+            }
+            if (cmbProduct.Text == "Ring")
+            {
+                tblPrice.Text = Convert.ToString(2000);
+            }
+            if (cmbProduct.Text == "Bracelet")
+            {
+                tblPrice.Text = Convert.ToString(3000);
+            }
         }
     }
 }
